@@ -1,176 +1,156 @@
-const app = document.querySelector('#app');
-
-app.innerHTML = `
-  <div class="page-shell">
-    <header class="topbar">
-      <div class="brand-wrap">
-        <div class="brand-mark">D</div>
-        <span class="brand-name">DigitalNest</span>
-      </div>
-
-      <nav class="nav">
-        <a href="#solutions">Solutions</a>
-        <a href="#platform">Platform</a>
-        <a href="#insights">Insights</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <button class="nav-cta">Book a demo</button>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <span class="eyebrow">Built for digital growth</span>
-          <h1>Turn your digital presence into a high-converting ecosystem.</h1>
-          <p>
-            DigitalNest helps teams launch faster, automate customer journeys, and transform fragmented workflows into one connected experience.
-          </p>
-
-          <div class="hero-actions">
-            <button class="primary">Get started</button>
-            <button class="secondary">See platform</button>
-          </div>
-
-          <div class="trust-row">
-            <div>
-              <strong>4.9/5</strong>
-              <span>Client satisfaction</span>
-            </div>
-            <div>
-              <strong>2.3x</strong>
-              <span>Faster launches</span>
-            </div>
-            <div>
-              <strong>87%</strong>
-              <span>Workflow automation</span>
-            </div>
-          </div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DigitalNest application dashboard UI preview." />
+    <title>Dashboard | DigitalNest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="/src/main.js" defer></script>
+  </head>
+  <body class="dashboard-body">
+    <div class="app-shell">
+      <aside class="app-sidebar">
+        <div class="brand-wrap sidebar-brand">
+          <div class="brand-mark">D</div>
+          <span class="brand-name">DigitalNest</span>
         </div>
 
-        <div class="hero-panel">
-          <div class="panel-card main-card">
-            <div class="card-header">
-              <span class="dot green"></span>
-              <span class="dot amber"></span>
-              <span class="dot red"></span>
+        <nav class="sidebar-nav">
+          <a href="#" class="active">Overview</a>
+          <a href="#">Campaigns</a>
+          <a href="#">Audience</a>
+          <a href="#">Automation</a>
+          <a href="#">Analytics</a>
+          <a href="#">Reports</a>
+        </nav>
+
+        <div class="sidebar-card">
+          <p>Monthly target</p>
+          <strong>82%</strong>
+          <span>+12% vs last month</span>
+        </div>
+      </aside>
+
+      <main class="app-main">
+        <header class="app-header">
+          <div>
+            <span class="eyebrow dark">Performance overview</span>
+            <h1>Welcome back, Maya.</h1>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-secondary">Export</button>
+            <button class="btn btn-primary">Create report</button>
+          </div>
+        </header>
+
+        <section class="app-grid top-kpis">
+          <div class="stat-card accent">
+            <p>Net revenue</p>
+            <strong>$134.2K</strong>
+            <span>+18.4% this month</span>
+          </div>
+          <div class="stat-card">
+            <p>Qualified leads</p>
+            <strong>2,480</strong>
+            <span>+11.1% this month</span>
+          </div>
+          <div class="stat-card">
+            <p>Conversion rate</p>
+            <strong>6.8%</strong>
+            <span>+1.2 pts</span>
+          </div>
+          <div class="stat-card">
+            <p>Customer retention</p>
+            <strong>91.4%</strong>
+            <span>+3.8 pts</span>
+          </div>
+        </section>
+
+        <section class="app-grid content-grid">
+          <div class="panel large-panel">
+            <div class="panel-head">
+              <h3>Growth performance</h3>
+              <span class="pill success">+24.7%</span>
             </div>
 
-            <div class="stat-grid">
-              <div>
-                <span>Revenue impact</span>
-                <strong>$1.4M</strong>
-              </div>
-              <div>
-                <span>New leads</span>
-                <strong>12.8K</strong>
-              </div>
-              <div>
-                <span>Conversion</span>
-                <strong>+31%</strong>
-              </div>
-              <div>
-                <span>Uptime</span>
-                <strong>99.9%</strong>
-              </div>
-            </div>
-
-            <div class="mini-chart">
-              <span class="bar b1"></span>
-              <span class="bar b2"></span>
-              <span class="bar b3"></span>
-              <span class="bar b4"></span>
-              <span class="bar b5"></span>
-              <span class="bar b6"></span>
+            <div class="line-chart">
+              <span style="--h: 38%"></span>
+              <span style="--h: 46%"></span>
+              <span style="--h: 40%"></span>
+              <span style="--h: 58%"></span>
+              <span style="--h: 66%"></span>
+              <span style="--h: 72%"></span>
+              <span style="--h: 78%"></span>
+              <span style="--h: 94%"></span>
+              <span style="--h: 88%"></span>
+              <span style="--h: 100%"></span>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section class="feature-strip" id="solutions">
-        <article>
-          <span class="feature-icon">⚡</span>
-          <h3>Launch faster</h3>
-          <p>Deploy campaigns, funnels, and experiences with less friction.</p>
-        </article>
-        <article>
-          <span class="feature-icon">🤖</span>
-          <h3>Automate smarter</h3>
-          <p>Connect actions and workflows across your customer journey.</p>
-        </article>
-        <article>
-          <span class="feature-icon">📊</span>
-          <h3>Measure impact</h3>
-          <p>Track performance with clear insight into conversion and growth.</p>
-        </article>
-      </section>
-
-      <section class="platform" id="platform">
-        <div class="section-heading">
-          <span class="eyebrow dark">Platform overview</span>
-          <h2>Everything your digital team needs in one nest.</h2>
-        </div>
-
-        <div class="platform-grid">
-          <div class="platform-card large">
-            <h3>Content + automation</h3>
-            <p>Create, optimize, and route digital experiences backed by business workflows.</p>
-            <ul>
-              <li>Campaign orchestration</li>
-              <li>Customer segmentation</li>
-              <li>Smart reporting</li>
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Channel mix</h3>
+            </div>
+            <div class="donut-wrap">
+              <div class="donut-chart">
+                <div class="donut-center">61%</div>
+              </div>
+            </div>
+            <ul class="legend-list">
+              <li><span class="legend teal"></span> Organic</li>
+              <li><span class="legend purple"></span> Paid</li>
+              <li><span class="legend amber"></span> Referral</li>
             </ul>
           </div>
+        </section>
 
-          <div class="platform-card">
-            <h3>Brand systems</h3>
-            <p>Standardize a consistent look and feel across every touchpoint.</p>
+        <section class="app-grid lower-grid">
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Top campaigns</h3>
+            </div>
+            <div class="campaign-list">
+              <div class="campaign-item">
+                <div>
+                  <strong>Spring Launch</strong>
+                  <small>Paid social</small>
+                </div>
+                <span class="pill success">94.2%</span>
+              </div>
+              <div class="campaign-item">
+                <div>
+                  <strong>Lifecycle Nurture</strong>
+                  <small>Email workflow</small>
+                </div>
+                <span class="pill neutral">71.3%</span>
+              </div>
+              <div class="campaign-item">
+                <div>
+                  <strong>Partner Expansion</strong>
+                  <small>Referral</small>
+                </div>
+                <span class="pill success">82.9%</span>
+              </div>
+            </div>
           </div>
 
-          <div class="platform-card">
-            <h3>Marketing ops</h3>
-            <p>Unify enabling processes to reduce manual effort and improve output.</p>
+          <div class="panel">
+            <div class="panel-head">
+              <h3>Recent activity</h3>
+            </div>
+            <ul class="activity-list">
+              <li><span class="activity-dot teal"></span> Campaign metrics refreshed</li>
+              <li><span class="activity-dot purple"></span> New lead source connected</li>
+              <li><span class="activity-dot amber"></span> Automation workflow approved</li>
+              <li><span class="activity-dot red"></span> Alert: CPA exceeds threshold</li>
+            </ul>
           </div>
-        </div>
-      </section>
-
-      <section class="insights" id="insights">
-        <div class="section-heading">
-          <span class="eyebrow dark">Why teams choose us</span>
-          <h2>Built for modern operators, teams, and brands.</h2>
-        </div>
-
-        <div class="insight-grid">
-          <div class="insight-card">
-            <strong>Fewer silos</strong>
-            <p>Replace disconnected tools with one flexible platform.</p>
-          </div>
-          <div class="insight-card">
-            <strong>Faster decisions</strong>
-            <p>Make better choices with clear data across business functions.</p>
-          </div>
-          <div class="insight-card">
-            <strong>Stronger customer experience</strong>
-            <p>Deliver polished journeys that feel cohesive and premium.</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer" id="contact">
-      <div>
-        <span class="brand-name">DigitalNest</span>
-      </div>
-      <div class="footer-links">
-        <a href="#solutions">Solutions</a>
-        <a href="#platform">Platform</a>
-        <a href="#insights">Insights</a>
-      </div>
-      <button class="nav-cta">Contact sales</button>
-    </footer>
-  </div>
-`;
-
-const year = new Date().getFullYear();
-const footer = document.querySelector('.footer');
-footer.insertAdjacentHTML('beforeend', `<p class="copyright">© ${year} DigitalNest. All rights reserved.</p>`);
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
